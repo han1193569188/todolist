@@ -183,7 +183,6 @@
                     <div class="del">-</div>
                    </li>`;
                 doing.push(val);
-                $(".num1").text(doing.length);
             }else{
                 done.push(val);
                 str2+=`<li id="${val.id}">
@@ -191,12 +190,13 @@
                     <p class="message">${val.val}</p>
                     <div class="del">-</div>
                    </li>`;
-                $(".num2").text(done.length);
             }
-            $(".doing").html(str1);
-            $(".done").html(str2);
-            localStorage.todo=JSON.stringify(arr);
         });
+        $(".num1").text(doing.length);
+        $(".num2").text(done.length);
+        $(".doing").html(str1);
+        $(".done").html(str2);
+        localStorage.todo=JSON.stringify(arr);
     }
     todo();
     //删除
